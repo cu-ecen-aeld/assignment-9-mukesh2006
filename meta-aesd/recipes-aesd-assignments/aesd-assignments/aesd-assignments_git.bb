@@ -26,6 +26,10 @@ FILES:${PN} += "${bindir}/aesdsocket"
 TARGET_LDFLAGS += "-pthread -lrt"
 TARGET_CC_ARCH += "${LDFLAGS}"
 
+inherit update-rc.d
+INITSCRIPT_PACKAGES = "${PN}"
+INITSCRIPT_NAME:${PN} = "aesdsocket-start-stop"
+
 do_configure () {
 	:
 }
@@ -43,14 +47,9 @@ do_install () {
  # https://docs.yoctoproject.org/ref-manual/variables.html?highlight=workdir#term-S
  # See example at https://github.com/cu-ecen-aeld/ecen5013-yocto/blob/ecen5013-hello-world/meta-ecen5013/recipes-ecen5013/ecen5013-hello-world/ecen5013-hello-world_git.bb
 
- install -d ${D}${bindir}
- install -m 0755 ${S}/aesdsocket ${D}${bindir}/
- install -d ${D}${sysconfdir}/init.d
- install -m 0755 ${S}/S99aesdsocket ${D}${sysconfdir}/init.d/
-
- install -d ${D}${sysconfdir}/rc3.d
- install -d ${D}${sysconfdir}/rc5.d
- ln -sf ../init.d/S99aesdsocket ${D}${sysconfdir}/rc3.d/S99aesdsocket
- ln -sf ../init.d/S99aesdsocket ${D}${sysconfdir}/rc5.d/S99aesdsocket
+  install -d ${D}${bindir}
+  install -m 0755 ${S}/aesdsocket ${D}${bindir}
+  install -d ${D}${sysconfdir}/init.d
+  install -m 0755 ${S}/aesdsocket-start-stop ${D}${sysconfdir}/init.d
 
 }
