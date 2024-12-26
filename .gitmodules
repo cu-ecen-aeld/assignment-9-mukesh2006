@@ -4,4 +4,4 @@
 [submodule "poky"]
 	path = poky
 	url = https://git.yoctoproject.org/git/poky.git
-        branch = kirkstone
+    branch = kirkstone
