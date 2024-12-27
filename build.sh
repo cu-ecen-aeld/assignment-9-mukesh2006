@@ -17,7 +17,7 @@ local_conf_info=$?
 if [ $local_conf_info -ne 0 ];then
 	echo "Append ${CONFLINE} in the local.conf file"
 	echo ${CONFLINE} >> conf/local.conf
-	
+
 else
 	echo "${CONFLINE} already exists in the local.conf file"
 fi
@@ -34,4 +34,8 @@ else
 fi
 
 set -e
-bitbake core-image-aesd
+#bitbake -f  core-image-aesd
+#bitbake -c clean aesd-assignments
+#bitbake -c clean aesd-assignments
+#bitbake aesd-assignments -v
+bitbake  core-image-aesd
