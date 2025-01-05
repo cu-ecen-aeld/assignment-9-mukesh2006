@@ -5,14 +5,9 @@ LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda
 # TODO: Set this  with the path to your assignments rep.  Use ssh protocol and see lecture notes
 # about how to setup ssh-agent for passwordless access
 SRC_URI = "git://git@github.com/cu-ecen-aeld/assignments-3-and-later-mukesh2006;protocol=ssh;branch=master"
-#SRC_URI = "file://home/mj/Downloads/mj-personal/git/assignments/assignment-3"
 
 PV = "1.0+git${SRCPV}"
 # TODO: set to reference a specific commit hash in your assignment repo
-#SRCREV = "5889a9ec930f46813bd7e0c79cc3ad07e5901fd5"
-#SRCREV = "41711cd0ef89357781c1ae657b4df7cc15e3ff77"
-#SRCREV = "4a6fb6481baed1db2340e6c72b78c059b323c01d"
-#SRCREV = "ea415b4229d314c43229df72201d79807b3cbad2"
 SRCREV = "4425f1e1b2c6cf2a746e4dbdf103dc4e8673ec1b"
 
 # This sets your staging directory based on WORKDIR, where WORKDIR is defined at 

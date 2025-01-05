@@ -1,0 +1,58 @@
+#!/bin/sh
+
+# Define constants for better readability
+MODULES_PATH="/lib/modules/"`uname -r`"/extra/"
+SCULL_MODULE="scull"
+FAULTY_MODULE="faulty"
+HELLO_MODULE="hello"
+
+# Function to handle errors and exit with a message
+function error_exit {
+    echo "Error: $1"
+    exit 1
+}
+
+# Check if exactly one argument is provided
+if [ $# -ne 1 ]; then
+    echo "Arguments are not equal to 1!"
+    exit 1
+fi
+
+# Get the mode (start or stop) from the argument
+mode_w="$1"
+
+# Perform actions based on the mode argument
+case "$mode_w" in
+    start)
+        echo "Loading modules..."
+
+        # Ensure the modules directory exists
+        if [ ! -d "$MODULES_PATH" ]; then
+            error_exit "Modules directory $MODULES_PATH does not exist!"
+        fi
+
+        # Change to the module directory
+        cd "$MODULES_PATH" || error_exit "Failed to change directory to $MODULES_PATH"
+
+        # Load the modules
+        scull_load || error_exit "Failed to load $SCULL_MODULE module"
+        module_load "$FAULTY_MODULE" || error_exit "Failed to load $FAULTY_MODULE module"
+        modprobe "$HELLO_MODULE" || error_exit "Failed to load $HELLO_MODULE module"
+        ;;
+
+    stop)
+        echo "Unloading modules..."
+
+        # Unload the modules
+        scull_unload || error_exit "Failed to unload $SCULL_MODULE module"
+        module_unload "$FAULTY_MODULE" || error_exit "Failed to unload $FAULTY_MODULE module"
+        rmmod "$HELLO_MODULE" || error_exit "Failed to remove $HELLO_MODULE module"
+        ;;
+
+    *)
+        error_exit "Invalid option! Valid options are 'start' or 'stop'."
+        ;;
+esac
+
+# Successful execution
+exit 0
