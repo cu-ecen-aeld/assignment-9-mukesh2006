@@ -1,22 +1,25 @@
 #!/bin/sh
 
-#--------------------------------------
+#--------------------------------------------------
 # Author: Mukesh Jha
-# Description: Init script to load and unload aesdchar driver
-#--------------------------------------
+# Description: Initialization script to load and unload the aesdchar driver
+#--------------------------------------------------
 
+# Function to handle loading and unloading of aesdchar driver
 case "$1" in
     start)
-	echo "loading aesdchar driver"
-	aesdchar_load
-	;;
+        echo "Loading the aesdchar driver..."
+        aesdchar_load
+        ;;
     stop)
-	echo "removing aesdchar driver"
-	aesdchar_unload
-	;;
+        echo "Unloading the aesdchar driver..."
+        aesdchar_unload
+        ;;
     *)
-	echo "Usage: $0 {start|stop}"
-	exit 1
+        echo "Usage: $0 {start|stop}"
+        exit 1
+        ;;
 esac
 
+# Exit the script successfully
 exit 0
