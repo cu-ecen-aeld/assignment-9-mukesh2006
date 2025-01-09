@@ -4,6 +4,7 @@ CORE_IMAGE_EXTRA_INSTALL += "meta-modules"
 CORE_IMAGE_EXTRA_INSTALL += "scull"
 CORE_IMAGE_EXTRA_INSTALL += "openssh"
 CORE_IMAGE_EXTRA_INSTALL += "modules-autostart"
+CORE_IMAGE_EXTRA_INSTALL += "aesd-char-device"
 
 inherit extrausers
 # See https://docs.yoctoproject.org/singleindex.html#extrausers-bbclass

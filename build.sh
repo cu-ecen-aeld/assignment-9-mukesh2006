@@ -38,4 +38,4 @@ set -e
 #bitbake -c clean aesd-assignments
 #bitbake -c clean aesd-assignments
 #bitbake aesd-assignments -v
-bitbake  core-image-aesd
+bitbake -f core-image-aesd
