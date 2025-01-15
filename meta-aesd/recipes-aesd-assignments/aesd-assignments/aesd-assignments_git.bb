@@ -6,7 +6,9 @@ LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda
 SRC_URI = "git://git@github.com/cu-ecen-aeld/assignments-3-and-later-mukesh2006;protocol=ssh;branch=master"
 #SRC_URI = "file:///home/mj/Downloads/mj-personal/git/assignments/assignment-3/"
 # set to reference a specific commit hash in your assignment repo
-SRCREV = "f338c8eec066ab8f2b33b81216bca2fcac894c96"
+#SRCREV = "f338c8eec066ab8f2b33b81216bca2fcac894c96"
+
+SRCREV = "1d3901569ecbe5f91846cde27fd84ec156488459"
 
 PV = "1.0+git${SRCPV}"
 
