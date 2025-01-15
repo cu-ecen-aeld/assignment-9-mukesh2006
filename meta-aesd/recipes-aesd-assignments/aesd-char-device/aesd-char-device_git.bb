@@ -5,16 +5,17 @@
 # WARNING: The following LICENSE and LIC_FILES_CHKSUM values are estimates and may require validation.
 # It is your responsibility to confirm their correctness.
 
-LICENSE = "CLOSED"
-#LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda2f7b4f302"
+LICENSE = "MIT"
+LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda2f7b4f302"
 
 SRC_URI = "git://git@github.com/cu-ecen-aeld/assignments-3-and-later-mukesh2006;protocol=ssh;branch=master"
+SRCREV = "1d3901569ecbe5f91846cde27fd84ec156488459" 
+
 # Add the start-stop script for the driver
 SRC_URI += "file://aesd-char-start-stop"
 
 # Version and source revision details
 PV = "1.0+git${SRCPV}"
-SRCREV = "7859050e051cbfb13f18edd6d14e3179e8fd1855"
 
 # Define the source directory for the aesdchar driver
 S = "${WORKDIR}/git/aesd-char-driver"
