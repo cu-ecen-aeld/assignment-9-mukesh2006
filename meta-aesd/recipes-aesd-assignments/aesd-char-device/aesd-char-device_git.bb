@@ -10,7 +10,7 @@ LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda
 # Source URI and Version Information
 # Define the Git repository and commit hash for the source code.
 SRC_URI = "git://git@github.com/cu-ecen-aeld/assignments-3-and-later-mukesh2006;protocol=ssh;branch=master"
-SRCREV = "073468f34cbf668614576ea50e9e1d7b6e73cad8" 
+SRCREV = "ca0c9989020f600fa41a1f1e235ae621c3a4bff4" 
 
 # Add the start-stop init script for the driver
 SRC_URI += "file://aesd-char-start-stop"
