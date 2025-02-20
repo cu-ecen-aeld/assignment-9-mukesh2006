@@ -12,7 +12,7 @@ LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda
 SRC_URI = "git://git@github.com/cu-ecen-aeld/assignments-3-and-later-mukesh2006;protocol=ssh;branch=master"
 
 # Reference a specific commit hash from your assignments repository (optional)
-SRCREV = "073468f34cbf668614576ea50e9e1d7b6e73cad8"
+SRCREV = "${AUTOREV}"
 
 # Versioning based on Git revision
 PV = "1.0+git${SRCPV}"

@@ -10,12 +10,16 @@ LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda
 # Source URI and Version Information
 # Define the Git repository and commit hash for the source code.
 SRC_URI = "git://git@github.com/cu-ecen-aeld/assignments-3-and-later-mukesh2006;protocol=ssh;branch=master"
+
+#SRC_URI = "git://git@github.com/cu-ecen-aeld/assignments-3-and-later-marcoronk;protocol=ssh;branch=main"
+
 SRCREV = "${AUTOREV}" 
 
 # Add the start-stop init script for the driver
 SRC_URI += "file://aesd-char-start-stop"
 
 # Versioning based on Git revision
+
 PV = "1.0+git${SRCPV}"
 
 # Define the source directory for the AESD character driver

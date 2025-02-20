@@ -36,8 +36,8 @@ fi
 set -e
 #bitbake -f  core-image-aesd
 bitbake -c cleanall aesd-assignments
-bitbake -c fetch aesd-assignments
-bitbake -c build aesd-assignments
+bitbake aesd-assignments
+
 #bitbake -c clean aesd-assignments
 #bitbake aesd-assignments -v
 #bitbake -c aesd-char-device
