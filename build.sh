@@ -35,11 +35,11 @@ fi
 
 set -e
 #bitbake -f  core-image-aesd
-bitbake -c cleanall aesd-assignments
-bitbake aesd-assignments
+#bitbake -c cleanall aesd-assignments
+#bitbake aesd-assignments
 
 #bitbake -c clean aesd-assignments
 #bitbake aesd-assignments -v
 #bitbake -c aesd-char-device
 #bitbake aesd-char-device -v
-bitbake -f core-image-aesd
+bitbake core-image-aesd
