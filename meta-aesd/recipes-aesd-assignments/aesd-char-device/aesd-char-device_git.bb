@@ -11,8 +11,6 @@ LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda
 # Define the Git repository and commit hash for the source code.
 SRC_URI = "git://git@github.com/cu-ecen-aeld/assignments-3-and-later-mukesh2006;protocol=ssh;branch=master"
 
-#SRC_URI = "git://git@github.com/cu-ecen-aeld/assignments-3-and-later-marcoronk;protocol=ssh;branch=main"
-
 SRCREV = "${AUTOREV}" 
 
 # Add the start-stop init script for the driver
